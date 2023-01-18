@@ -1,0 +1,21 @@
+
+billet = 20
+piece = 100
+distrib = 200
+monnaie = 0
+
+
+while distrib > 0:
+    print("Montant restant : ", distrib)
+    prix = int(input("Prix de l'article : "))
+    fourni = int(input("Montant fourni : "))
+    monnaie = fourni - prix
+    distrib = distrib - monnaie
+
+    if fourni <= distrib:
+        print("Je vous rends la monnaie : ", monnaie)
+
+
+    elif fourni > distrib:
+        print("Je n'ai pas assez de monnaie !")
+
