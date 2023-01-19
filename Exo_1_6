@@ -1,0 +1,20 @@
+
+from random import randint
+
+n_mystere = randint(1,1000)
+n_essai = 1
+
+n_choisi = int(input("Quel est le nombre mystère ? : "))
+while n_choisi != n_mystere:
+    if n_choisi < n_mystere:
+        print("Plus grand !")
+        n_essai = n_essai + 1
+        n_choisi = int(input("Quel est le nombre mystère ? : "))
+    elif n_choisi > n_mystere:
+        print("Plus petit !")
+        n_essai = n_essai + 1
+        n_choisi = int(input("Quel est le nombre mystère ? : "))
+
+if n_choisi == n_mystere:
+    print("Bravo ! Le nombre mystère était bien ", n_mystere,)
+    print("Tu as trouvé en ",n_essai, "coups")
