@@ -9,13 +9,34 @@ while distrib > 0:
     print("Montant restant : ", distrib)
     prix = int(input("Prix de l'article : "))
     fourni = int(input("Montant fourni : "))
-    monnaie = fourni - prix
-    distrib = distrib - monnaie
 
-    if fourni <= distrib:
-        print("Je vous rends la monnaie : ", monnaie)
+    billet_rendu = (fourni - prix) // 5
+    piece_rendu = (fourni - prix) % 5
 
 
-    elif fourni > distrib:
-        print("Je n'ai pas assez de monnaie !")
+    if fourni < prix:
+        print("Pas assez d'argent introduit dans le distributeur")
+    else:
+         if fourni <= distrib + prix:
+            monnaie = fourni - prix
+            distrib = distrib - monnaie
+
+            print("Je vous rends la monnaie : ", monnaie)
+
+
+            '''if billet_rendu < billet:
+                billet = billet-billet_rendu
+                if monnaie-billet_rendu*5 != 0:
+                    piece = piece-piece_rendu
+            print(billet_rendu, "billets de 5 euros et ", piece_rendu, " pieces de 1 euro")'''
+
+
+
+            if distrib == 0:
+                print("Le distributeur ne contient plus d'argent")
+         elif fourni > distrib + prix:
+            print("Je n'ai pas assez de monnaie !")
+            print("Montant restant : ", distrib)
+            prix = int(input("Prix de l'article : "))
+            fourni = int(input("Montant fourni : "))
 
