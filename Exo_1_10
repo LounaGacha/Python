@@ -1,0 +1,15 @@
+
+ch1 = input("Saisir la première chaine de caractère : ")
+ch2 = input("Saisir la seconde chaine de caractère : ")
+
+if len(ch1) == len(ch2):
+    dist = 0
+    lg = len(ch1)
+    for i in range(0,lg):
+        c1 = ch1[i]
+        c2 = ch2[i]
+        if not c1 == c2:
+            dist = dist + 1
+    print("Distance de Hamming = ",dist)
+else:
+    print("Distance de Hamming = -1")
