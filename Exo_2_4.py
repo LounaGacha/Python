@@ -20,8 +20,8 @@ def ligne_creuse(car:str, nb:int) -> str:
 
 
 def rectangle_plein(car:str, longeur:int, largeur:int) -> None:
-        for i in range(largeur):
-            ligne_pleine(car,longeur)
+        for i in range(longeur):
+            print(ligne_pleine(car,largeur))
 
 
 
